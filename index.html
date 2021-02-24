@@ -2445,13 +2445,17 @@
 });
 
 
-/*let cijfers =["438,7","472,2","507,5","667,8","975,1","970,6","1012,3","1288,1","1521,7","1652,8","1904,5"];
+/*
+
+let cijfers =["438,7","472,2","507,5","667,8","975,1","970,6","1012,3","1288,1","1521,7","1652,8","1904,5"];
 let newVals1 = cijfers.map(dots => dots.toString().replace(',','.'));
+//copied the right data for every country from the console to the html file. 
+
 
 console.log(newVals1);*/
 
 
-//plaatsing tabel2:
+//plaatsing tabel2 via CSV file:
 
 
 
@@ -2670,80 +2674,7 @@ async function getPoints() {
 
 
  
-/*
-const xas = [];
-const yas =[];
 
-let counter = 2;
-
-
-
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://canvasjs.com/services/data/datapoints.php?xstart=1&ystart=1&length=100&type=json", true); 
-    xhttp.responseType = "json";
-    xhttp.onload = () => {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-          xas = xhttp.response.map(function(e) {
-                return e[0];
-            });
-            yas = xhttp.response.map(function (e) {
-                return e[1];
-            });
-            
-            var ctx = document.getElementById("myChart3");
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels:xas,
-                    datasets: [{
-                        data: yas,
-                        label: "Brol",
-                        borderWidth: 1,
-                        borderColor: "blue",
-                        backgroundColor: "grey",
-                        fill: false
-                    }]
-                },
-            });
-        }
-    }
-    xhttp.send();
-    updateChart();
-
-function updateChart() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://canvasjs.com/services/data/datapoints.php?xstart="+(counter=counter+1)+"&ystart=10&length=1&type=json", true); 
-    xhr.responseType = "json";
-    xhr.onload = () => {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            //xas.shift();
-            //yas.shift();
-            xas.push(xhr.response[0][0]);
-            yas.push(xhr.response[0][1]);
-        
-            var ctx = document.getElementById("myChart3");
-            const myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: xas,
-                    datasets: [{
-                        data: yas,
-                        label: "Live Update",
-                        borderWidth: 1,
-                        borderColor: "blue",
-                        backgroundColor: "grey",
-                        
-                        fill: false
-                    }]
-                },
-            });
-        }
-    }
-    xhr.send();
-    setTimeout(function(){updateChart()}, 1000);
-}
-*/
 
  </script>
 
